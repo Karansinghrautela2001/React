@@ -8,6 +8,10 @@ let n=text.toUpperCase()
 setText(n)
 
 }
+const c=()=>{
+  let n=text.toLowerCase()
+  setText(n)
+}
 const b=(event)=>{
   console.log("change")
   setText(event.target.value)
@@ -16,18 +20,21 @@ const b=(event)=>{
  
   return (
     <>
-    <h1>{props.heading}</h1>
-    <div className="mb-3">
+    <h1 className='container'>{props.heading}</h1>
+    <div className=" container mb-3">
   
   <textarea className="form-control" value={text} onChange={b} id="box" rows="6"></textarea>
-  <button className='btn btn-primary my-2' onClick={a}>submit</button>
+  <button className='btn btn-primary my-2 mx-2' onClick={a}>upper case</button>
+  <button className='btn btn-primary ' onClick={c}>lower case</button>
 </div>
 <div className='container my-3'>
   <h1>Your text summary</h1>
   <p>{text.split(" ").length} words & {text.length} Character's</p>
+  <p>{0.008 * text.split(" ").length} minutes to read</p>
+  <h2>preview
+  </h2>
+  <p>{text}</p>
 </div>
-
-
-    </>
-  )
+ </>
+)
 }

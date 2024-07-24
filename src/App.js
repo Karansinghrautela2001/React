@@ -8,7 +8,7 @@ function App() {
     <>
     
     <Navbar title="textutils" about="about us"/>
-    <div className='container'><Form heading='convert'/></div>
+    <div className=''><Form heading='convert'/></div>
     
    
    
